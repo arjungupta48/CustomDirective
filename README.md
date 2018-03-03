@@ -1,3 +1,21 @@
+# SQL QUERY
+
+SELECT TOP 1000 [p_id]
+      ,[date]
+      ,[vch_url]
+  FROM [ActivityTracker].[dbo].[ActivityTable]
+
+
+SELECT COUNT (DISTINCT [vch_url]) as URLCount
+  FROM [ActivityTracker].[dbo].[ActivityTable] 
+  where vch_url like '%MicroUI%' and p_id='BZE' and date>='2007-05-01 00:00:00' and date<='2007-05-15 00:00:00'
+
+SELECT [vch_url], *
+  FROM [ActivityTracker].[dbo].[ActivityTable] 
+  where vch_url like '%MicroUI%' and p_id='SAP' and date>='2007-05-06 00:00:00' and date<='2007-05-15 00:00:00'
+
+
+
 # CustomDirective
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
